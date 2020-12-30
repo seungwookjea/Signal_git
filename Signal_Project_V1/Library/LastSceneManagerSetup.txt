@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Mega Fantasy Props Pack/Example Scenes/House on night.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
