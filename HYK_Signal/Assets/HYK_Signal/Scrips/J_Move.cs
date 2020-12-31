@@ -7,9 +7,11 @@ public class J_Move : MonoBehaviour
 
     public float speed = 10;
     CharacterController cc;
+    Rigidbody rb;
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -20,6 +22,11 @@ public class J_Move : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
         transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
+        if(cc.isGrounded == false)
+        {
+            move.y -= 90f * Time.deltaTime;
+        }
+
         cc.Move(move * speed * Time.deltaTime);
     }
 }
