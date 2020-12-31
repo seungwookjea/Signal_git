@@ -77,7 +77,10 @@ public class J_Pointer : MonoBehaviour
                 takenObj.GetComponent<Rigidbody>().isKinematic = true;
                 //takenObj.GetComponent<Collider>().isTrigger = true;
 
-                
+                if (takenObj.GetComponent<MeshRenderer>().enabled == false)
+                {
+                    takenObj.GetComponent<MeshRenderer>().enabled = true;
+                }
             }
         }
 
