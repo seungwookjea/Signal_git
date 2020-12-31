@@ -6,15 +6,28 @@ using UnityEngine;
 //Waking일때 zzz False , smells Good True
 public class SleepingMan : MonoBehaviour
 {
+    public Animator anim;
+    public GameObject zzz;
+    public GameObject EggCanvas;
+    public GameObject exp;
+    public GameObject key;
     // Start is called before the first frame update
     void Start()
     {
-        
+        exp.SetActive(false);
+        EggCanvas.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void isLaying()
     {
-        
+
+    }
+    public void isWaking()
+    {
+        anim.SetTrigger("isWaking");
+        GetComponent<Collider>().enabled = false;
+        zzz.SetActive(false);
+        exp.transform.position = key.transform.position;
+        exp.SetActive(true);
+        EggCanvas.SetActive(true);
     }
 }

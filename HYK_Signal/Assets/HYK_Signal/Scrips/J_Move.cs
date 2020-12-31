@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class J_Move : MonoBehaviour
 {
-
     public float speed = 10;
     CharacterController cc;
     Rigidbody rb;
@@ -13,10 +12,8 @@ public class J_Move : MonoBehaviour
         cc = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
     }
-
     void Update()
     {
-
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
