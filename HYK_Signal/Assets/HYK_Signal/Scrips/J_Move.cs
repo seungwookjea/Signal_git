@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class J_Move : MonoBehaviour
 {
-
     public float speed = 10;
     CharacterController cc;
     void Start()
     {
         cc = GetComponent<CharacterController>();
     }
-
     void Update()
     {
-
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
